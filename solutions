@@ -1,0 +1,29 @@
+
+a. What is NoSQL data base?
+ans:A NoSQL (originally referring to "non SQL", "non relational" or "not only SQL") database provides a mechanism for storage and retrieval of data which is modeled in means other than the tabular relations used in relational databases.
+----------------------------------------------------------------------------------------------------------------------------------
+b.How does data get stored in NoSQl database?
+
+ans:There are various NoSQL Databases. Each one uses a different method to store data. Some might use column store, some document, some graph, etc., Each database has its own unique characteristics. 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+c. What is a column family in HBase?
+
+
+ans:A HBase table is comprised of one or more column families, each of which is stored in a separate set of regionfiles sharing a common key. To express it in terms of an RDBMS, a column family is roughly analogous to a RDBMS table with the rowkey as a clustered primary key index.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+d.How many maximum number of columns can be added to HBase table?
+
+ans: No There is no such limit
+--------------------------------------------------------------------------------------------------------------------------------
+e
+ans)Column families must be declared up front at schema definition time whereas columns do not need to be defined at schema time but can be conjured on the fly while the table is up an running.
+
+Physically, all column family members are stored together on the filesystem. Because tunings and storage specifications are done at the column family level, it is advised that all column family members have the same general access pattern and size characteristics.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+f)
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+g)What happens internally when new data gets inserted into HBase table
+To write data to HBase, you use methods of the HTableInterface class. You can use the Java API directly, or use HBase Shell, Thrift API, REST API, or another client which uses the Java API indirectly. When you issue a Put, the coordinates of the data are the row, the column, and the timestamp. The timestamp is unique per version of the cell, and can be generated automatically or specified programmatically by your application, and must be a long integer.
